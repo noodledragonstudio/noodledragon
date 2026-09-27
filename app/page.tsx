@@ -312,11 +312,11 @@ export function SiteApp({ initialPrivacy = false }: { initialPrivacy?: boolean }
                 aria-label="Visit the Macaroni website"
               >
                 <Image
-                  src={`${basePath}/products/macaroni-changed-feed.webp`}
-                  alt="Macaroni showing changed Markdown files in a project folder"
-                  width={2016}
-                  height={1260}
-                  sizes="(max-width: 760px) 92vw, 46vw"
+                  src={`${basePath}/products/macaroni-icon.png`}
+                  alt="Macaroni app icon"
+                  width={180}
+                  height={180}
+                  sizes="180px"
                 />
               </a>
               <div className="product-content">
@@ -352,11 +352,11 @@ export function SiteApp({ initialPrivacy = false }: { initialPrivacy?: boolean }
                 aria-label="Visit the Munch Monsters website"
               >
                 <Image
-                  src={`${basePath}/products/munch-monsters-gameplay.webp`}
-                  alt="Munch Monsters gameplay with blueberries being fed to Munch"
-                  width={960}
-                  height={442}
-                  sizes="(max-width: 760px) 92vw, 46vw"
+                  src={`${basePath}/products/munch-monsters-icon.png`}
+                  alt="Munch Monsters app icon"
+                  width={180}
+                  height={180}
+                  sizes="180px"
                 />
               </a>
               <div className="product-content">
