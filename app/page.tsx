@@ -286,13 +286,51 @@ export function SiteApp({ initialPrivacy = false }: { initialPrivacy?: boolean }
           </div>
         </div>
         <section
+          className="capabilities shell section-space"
+          id="flavour"
+          aria-labelledby="capabilities-title"
+        >
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">01 / WHAT WE MAKE</p>
+              <h2 id="capabilities-title">
+                Different screens.
+                <br />
+                <em>Same spark.</em>
+              </h2>
+            </div>
+            <p>
+              From a useful little tool to a whole new world, we bring the same
+              care, curiosity and character to everything we make.
+            </p>
+          </div>
+          <div className="capability-grid">
+            {capabilities.map((item) => (
+              <article className="capability" id={item.id} key={item.id}>
+                <CapabilityArt type={item.id} />
+                <div className="capability-heading">
+                  <h3>{item.name}</h3>
+                  <span>{item.number}</span>
+                </div>
+                <p className="mini-label">{item.tag}</p>
+                <p className="capability-copy">{item.copy}</p>
+                <ul className="skill-list">
+                  {item.skills.map((skill) => (
+                    <li key={skill}>{skill}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </section>
+        <section
           className="products shell section-space"
           id="products"
           aria-labelledby="products-title"
         >
           <div className="section-heading products-heading">
             <div>
-              <p className="eyebrow">01 / FROM THE STUDIO</p>
+              <p className="eyebrow">FROM THE STUDIO</p>
               <h2 id="products-title">
                 Meet the things
                 <br />
@@ -385,44 +423,6 @@ export function SiteApp({ initialPrivacy = false }: { initialPrivacy?: boolean }
                 </a>
               </div>
             </article>
-          </div>
-        </section>
-        <section
-          className="capabilities shell section-space"
-          id="flavour"
-          aria-labelledby="capabilities-title"
-        >
-          <div className="section-heading">
-            <div>
-              <p className="eyebrow">WHAT WE MAKE</p>
-              <h2 id="capabilities-title">
-                Different screens.
-                <br />
-                <em>Same spark.</em>
-              </h2>
-            </div>
-            <p>
-              From a useful little tool to a whole new world, we bring the same
-              care, curiosity and character to everything we make.
-            </p>
-          </div>
-          <div className="capability-grid">
-            {capabilities.map((item) => (
-              <article className="capability" id={item.id} key={item.id}>
-                <CapabilityArt type={item.id} />
-                <div className="capability-heading">
-                  <h3>{item.name}</h3>
-                  <span>{item.number}</span>
-                </div>
-                <p className="mini-label">{item.tag}</p>
-                <p className="capability-copy">{item.copy}</p>
-                <ul className="skill-list">
-                  {item.skills.map((skill) => (
-                    <li key={skill}>{skill}</li>
-                  ))}
-                </ul>
-              </article>
-            ))}
           </div>
         </section>
         <section className="belief-section" aria-labelledby="belief-title">
