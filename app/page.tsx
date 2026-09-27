@@ -330,7 +330,7 @@ export function SiteApp({ initialPrivacy = false }: { initialPrivacy?: boolean }
         >
           <div className="section-heading products-heading">
             <div>
-              <p className="eyebrow">FROM THE STUDIO</p>
+              <p className="eyebrow">02 / FROM THE STUDIO</p>
               <h2 id="products-title">
                 Meet the things
                 <br />
@@ -452,7 +452,7 @@ export function SiteApp({ initialPrivacy = false }: { initialPrivacy?: boolean }
         >
           <div className="section-heading">
             <div>
-              <p className="eyebrow">02 / HOW WE WORK</p>
+              <p className="eyebrow">03 / HOW WE WORK</p>
               <h2 id="process-title">
                 A good idea.
                 <br />
@@ -517,7 +517,7 @@ export function SiteApp({ initialPrivacy = false }: { initialPrivacy?: boolean }
             </div>
           </div>
           <div className="about-copy">
-            <p className="eyebrow">03 / A BIT ABOUT US</p>
+            <p className="eyebrow">04 / A BIT ABOUT US</p>
             <h2 id="about-title">
               Thoughtful humans.
               <br />
