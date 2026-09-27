@@ -306,26 +306,25 @@ export function SiteApp({ initialPrivacy = false }: { initialPrivacy?: boolean }
           </div>
           <div className="product-grid">
             <article className="product-card product-macaroni">
-              <a
-                className="product-visual"
-                href="https://macaroni.noodledragon.studio/"
-                aria-label="Visit the Macaroni website"
-              >
-                <Image
-                  src={`${basePath}/products/macaroni-icon.png`}
-                  alt="Macaroni app icon"
-                  width={180}
-                  height={180}
-                  sizes="180px"
-                />
-              </a>
               <div className="product-content">
                 <div className="product-topline">
                   <p className="eyebrow">MAC APP · COMING SOON</p>
                   <span>01</span>
                 </div>
-                <h3>Macaroni</h3>
-                <p className="product-subtitle">Markdown viewer for Mac</p>
+                <div className="product-title-row">
+                  <Image
+                    className="product-icon"
+                    src={`${basePath}/products/macaroni-icon.png`}
+                    alt="Macaroni app icon"
+                    width={180}
+                    height={180}
+                    sizes="84px"
+                  />
+                  <div>
+                    <h3>Macaroni</h3>
+                    <p className="product-subtitle">Markdown viewer for Mac</p>
+                  </div>
+                </div>
                 <p>
                   Read a Markdown file or watch an entire project folder.
                   Macaroni surfaces what changed while AI agents work, renders
@@ -346,26 +345,25 @@ export function SiteApp({ initialPrivacy = false }: { initialPrivacy?: boolean }
             </article>
 
             <article className="product-card product-munch">
-              <a
-                className="product-visual"
-                href="https://munch-monsters.noodledragon.studio/"
-                aria-label="Visit the Munch Monsters website"
-              >
-                <Image
-                  src={`${basePath}/products/munch-monsters-icon.png`}
-                  alt="Munch Monsters app icon"
-                  width={180}
-                  height={180}
-                  sizes="180px"
-                />
-              </a>
               <div className="product-content">
                 <div className="product-topline">
                   <p className="eyebrow">KIDS’ GAME · COMING SOON</p>
                   <span>02</span>
                 </div>
-                <h3>Munch Monsters</h3>
-                <p className="product-subtitle">Food Fun for ages 4–7</p>
+                <div className="product-title-row">
+                  <Image
+                    className="product-icon"
+                    src={`${basePath}/products/munch-monsters-icon.png`}
+                    alt="Munch Monsters app icon"
+                    width={180}
+                    height={180}
+                    sizes="84px"
+                  />
+                  <div>
+                    <h3>Munch Monsters</h3>
+                    <p className="product-subtitle">Food Fun for ages 4–7</p>
+                  </div>
+                </div>
                 <p>
                   Feed everyday foods to Munch and place treats in the Treat
                   Jar. A gentle, voice-led game with 20 levels, 200 foods and no
