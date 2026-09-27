@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 const basePath = import.meta.env.VITE_BASE_PATH ?? "";
 const links = [
-  { href: "#flavour", text: "What we make" },
+  { href: "#products", text: "Our apps" },
   { href: "#process", text: "Our approach" },
   { href: "#about", text: "The studio" },
 ];
@@ -43,10 +43,10 @@ export function SiteHeader() {
         onClick={() => setOpen(false)}
       >
         <Image
-          src={`${basePath}/brand/logo-horizontal-apps-games.png`}
+          src={`${basePath}/brand/logo-horizontal-apps-games-640.png`}
           alt=""
-          width={2172}
-          height={724}
+          width={640}
+          height={213}
           className="brand-logo"
           priority
         />
@@ -87,7 +87,7 @@ export function SiteHeader() {
         <a href="#contact" onClick={() => setOpen(false)}>
           <span>04</span>Let’s talk<span aria-hidden="true">↗</span>
         </a>
-        <p>macOS apps · Mobile apps · Mobile games</p>
+        <p>Macaroni · Munch Monsters · More in the works</p>
       </nav>
     </header>
   );

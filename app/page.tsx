@@ -13,10 +13,11 @@ const basePath = import.meta.env.VITE_BASE_PATH ?? "";
 const homePath = `${basePath}/`;
 const privacyPath = `${basePath}/privacy.html`;
 
-const homeTitle = "Noodle Dragon Studio | macOS Apps, Mobile Apps & Games";
+const homeTitle = "Noodle Dragon Studio | Macaroni & Munch Monsters";
 const privacyTitle = "Privacy | Noodle Dragon Studio";
 const homeSectionHashes = new Set([
   "#top",
+  "#products",
   "#flavour",
   "#process",
   "#about",
@@ -224,8 +225,8 @@ export function SiteApp({ initialPrivacy = false }: { initialPrivacy?: boolean }
               a little more personality. Thoughtful, useful, and never boring.
             </p>
             <div className="hero-actions">
-              <a className="button button-ink" href="#flavour">
-                What we make <Arrow />
+              <a className="button button-ink" href="#products">
+                Explore our apps <Arrow />
               </a>
               <a className="quiet-link" href="#about">
                 Meet the studio <Arrow diagonal />
@@ -246,10 +247,10 @@ export function SiteApp({ initialPrivacy = false }: { initialPrivacy?: boolean }
             </span>
             <Image
               className="hero-dragon"
-              src={`${basePath}/brand/mascot.png`}
+              src={`${basePath}/brand/mascot-900.jpg`}
               alt="Our pink dragon mascot, happily munching noodles"
-              width={1254}
-              height={1254}
+              width={900}
+              height={900}
               sizes="(max-width: 760px) 90vw, 46vw"
               priority
             />
@@ -285,13 +286,117 @@ export function SiteApp({ initialPrivacy = false }: { initialPrivacy?: boolean }
           </div>
         </div>
         <section
+          className="products shell section-space"
+          id="products"
+          aria-labelledby="products-title"
+        >
+          <div className="section-heading products-heading">
+            <div>
+              <p className="eyebrow">01 / FROM THE STUDIO</p>
+              <h2 id="products-title">
+                Meet the things
+                <br />
+                <em>we’re making.</em>
+              </h2>
+            </div>
+            <p>
+              One useful Mac app. One playful food game. Both made with care,
+              character and a healthy appetite for the details.
+            </p>
+          </div>
+          <div className="product-grid">
+            <article className="product-card product-macaroni">
+              <a
+                className="product-visual"
+                href="https://macaroni.noodledragon.studio/"
+                aria-label="Visit the Macaroni website"
+              >
+                <Image
+                  src={`${basePath}/products/macaroni-changed-feed.webp`}
+                  alt="Macaroni showing changed Markdown files in a project folder"
+                  width={2016}
+                  height={1260}
+                  sizes="(max-width: 760px) 92vw, 46vw"
+                />
+              </a>
+              <div className="product-content">
+                <div className="product-topline">
+                  <p className="eyebrow">MAC APP · COMING SOON</p>
+                  <span>01</span>
+                </div>
+                <h3>Macaroni</h3>
+                <p className="product-subtitle">Markdown viewer for Mac</p>
+                <p>
+                  Read a Markdown file or watch an entire project folder.
+                  Macaroni surfaces what changed while AI agents work, renders
+                  Mermaid and maths, adds Quick Look, and stays safely read-only.
+                </p>
+                <ul className="product-tags" aria-label="Macaroni highlights">
+                  <li>macOS 15+</li>
+                  <li>Read-only</li>
+                  <li>$14.99 once</li>
+                </ul>
+                <a
+                  className="product-link"
+                  href="https://macaroni.noodledragon.studio/"
+                >
+                  Visit Macaroni <Arrow diagonal />
+                </a>
+              </div>
+            </article>
+
+            <article className="product-card product-munch">
+              <a
+                className="product-visual"
+                href="https://munch-monsters.noodledragon.studio/"
+                aria-label="Visit the Munch Monsters website"
+              >
+                <Image
+                  src={`${basePath}/products/munch-monsters-gameplay.webp`}
+                  alt="Munch Monsters gameplay with blueberries being fed to Munch"
+                  width={960}
+                  height={442}
+                  sizes="(max-width: 760px) 92vw, 46vw"
+                />
+              </a>
+              <div className="product-content">
+                <div className="product-topline">
+                  <p className="eyebrow">KIDS’ GAME · COMING SOON</p>
+                  <span>02</span>
+                </div>
+                <h3>Munch Monsters</h3>
+                <p className="product-subtitle">Food Fun for ages 4–7</p>
+                <p>
+                  Feed everyday foods to Munch and place treats in the Treat
+                  Jar. A gentle, voice-led game with 20 levels, 200 foods and no
+                  ads, in-app purchases or data collection.
+                </p>
+                <ul
+                  className="product-tags"
+                  aria-label="Munch Monsters highlights"
+                >
+                  <li>iPhone &amp; iPad</li>
+                  <li>Fully offline</li>
+                  <li>No tracking</li>
+                </ul>
+                <a
+                  className="product-link"
+                  href="https://munch-monsters.noodledragon.studio/"
+                >
+                  Visit Munch Monsters <Arrow diagonal />
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section
           className="capabilities shell section-space"
           id="flavour"
           aria-labelledby="capabilities-title"
         >
           <div className="section-heading">
             <div>
-              <p className="eyebrow">01 / WHAT WE MAKE</p>
+              <p className="eyebrow">WHAT WE MAKE</p>
               <h2 id="capabilities-title">
                 Different screens.
                 <br />
@@ -402,10 +507,10 @@ export function SiteApp({ initialPrivacy = false }: { initialPrivacy?: boolean }
           <div className="about-art">
             <span className="eyebrow">SMALL STUDIO. BIG IMAGINATION.</span>
             <Image
-              src={`${basePath}/brand/logo-square-apps-games.png`}
+              src={`${basePath}/brand/logo-square-apps-games-800.png`}
               alt="Noodle Dragon Studio illustrated dragon emblem"
-              width={1254}
-              height={1254}
+              width={800}
+              height={800}
               sizes="(max-width: 760px) 80vw, 34vw"
             />
             <div>

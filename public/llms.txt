@@ -1,0 +1,15 @@
+# Noodle Dragon Studio
+
+Noodle Dragon Studio is an independent app and game studio based in Aotearoa New Zealand. It creates useful software and playful experiences for Mac, mobile devices and families.
+
+## Products
+
+- Macaroni: A fast, read-only Markdown viewer for macOS 15 or later. It opens individual Markdown files or watches an entire project folder, surfaces files changed by AI agents, shows diffs since the last read, and renders Mermaid diagrams, KaTeX maths and syntax-highlighted code. It includes a Quick Look extension and works offline. Website: https://macaroni.noodledragon.studio/
+- Munch Monsters – Food Fun: A gentle, voice-led healthy-eating game for children aged 4–7. Players feed everyday foods to Munch and place treats in the Treat Jar across 20 levels and 200 foods. It works offline and has no ads, in-app purchases or data collection. Coming soon to the App Store for iPhone and iPad. Website: https://munch-monsters.noodledragon.studio/
+
+## Studio
+
+- Website: https://noodledragon.studio/
+- Location: Aotearoa New Zealand
+- Contact: tony@noodledragon.studio
+- Privacy: https://noodledragon.studio/privacy.html
