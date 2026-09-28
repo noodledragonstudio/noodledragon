@@ -12,6 +12,71 @@ import { SiteHeader } from "./site-header";
 const basePath = import.meta.env.VITE_BASE_PATH ?? "";
 const homePath = `${basePath}/`;
 const privacyPath = `${basePath}/privacy.html`;
+const siteUrl = "https://noodledragon.studio";
+
+const homeStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/#webpage`,
+      url: `${siteUrl}/`,
+      name: "Noodle Dragon Studio | Macaroni & Munch Monsters",
+      description:
+        "Independent New Zealand app and game studio behind Macaroni, a Markdown viewer for Mac, and Munch Monsters, a healthy-eating game for kids.",
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      about: { "@id": `${siteUrl}/#organization` },
+      mainEntity: [
+        { "@id": `${siteUrl}/#macaroni` },
+        { "@id": `${siteUrl}/#munch-monsters` },
+      ],
+      inLanguage: "en-NZ",
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": `${siteUrl}/#macaroni`,
+      name: "Macaroni",
+      url: "https://macaroni.noodledragon.studio/",
+      applicationCategory: "DeveloperApplication",
+      operatingSystem: "macOS 15 or later",
+      description:
+        "A read-only Markdown viewer for Mac that watches project folders and shows what changed while AI agents work.",
+      image: `${siteUrl}/products/macaroni-icon.webp`,
+      publisher: { "@id": `${siteUrl}/#organization` },
+      offers: {
+        "@type": "Offer",
+        price: "14.99",
+        priceCurrency: "USD",
+        availability: "https://schema.org/PreOrder",
+        url: "https://macaroni.noodledragon.studio/",
+      },
+    },
+    {
+      "@type": ["VideoGame", "MobileApplication"],
+      "@id": `${siteUrl}/#munch-monsters`,
+      name: "Munch Monsters – Food Fun",
+      url: "https://munch-monsters.noodledragon.studio/",
+      applicationCategory: "GameApplication",
+      operatingSystem: "iOS and iPadOS",
+      description:
+        "A gentle, voice-led healthy-eating game for children aged 4–7, with no ads, in-app purchases or data collection.",
+      image: `${siteUrl}/products/munch-monsters-icon.webp`,
+      publisher: { "@id": `${siteUrl}/#organization` },
+      audience: {
+        "@type": "PeopleAudience",
+        suggestedMinAge: 4,
+        suggestedMaxAge: 7,
+      },
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD",
+        availability: "https://schema.org/PreOrder",
+        url: "https://munch-monsters.noodledragon.studio/",
+      },
+    },
+  ],
+};
 
 const homeTitle = "Noodle Dragon Studio | Macaroni & Munch Monsters";
 const privacyTitle = "Privacy | Noodle Dragon Studio";
@@ -247,7 +312,7 @@ export function SiteApp({ initialPrivacy = false }: { initialPrivacy?: boolean }
             </span>
             <Image
               className="hero-dragon"
-              src={`${basePath}/brand/mascot-900.jpg`}
+              src={`${basePath}/brand/mascot-900.webp`}
               alt="Our pink dragon mascot, happily munching noodles"
               width={900}
               height={900}
@@ -328,7 +393,7 @@ export function SiteApp({ initialPrivacy = false }: { initialPrivacy?: boolean }
           id="products"
           aria-labelledby="products-title"
         >
-          <div className="section-heading products-heading">
+          <div className="section-heading">
             <div>
               <p className="eyebrow">02 / FROM THE STUDIO</p>
               <h2 id="products-title">
@@ -352,11 +417,11 @@ export function SiteApp({ initialPrivacy = false }: { initialPrivacy?: boolean }
                 <div className="product-title-row">
                   <Image
                     className="product-icon"
-                    src={`${basePath}/products/macaroni-icon.png`}
+                    src={`${basePath}/products/macaroni-icon.webp`}
                     alt="Macaroni app icon"
                     width={180}
                     height={180}
-                    sizes="84px"
+                    sizes="(max-width: 760px) 64px, 80px"
                   />
                   <div>
                     <h3>Macaroni</h3>
@@ -391,11 +456,11 @@ export function SiteApp({ initialPrivacy = false }: { initialPrivacy?: boolean }
                 <div className="product-title-row">
                   <Image
                     className="product-icon"
-                    src={`${basePath}/products/munch-monsters-icon.png`}
+                    src={`${basePath}/products/munch-monsters-icon.webp`}
                     alt="Munch Monsters app icon"
                     width={180}
                     height={180}
-                    sizes="84px"
+                    sizes="(max-width: 760px) 64px, 80px"
                   />
                   <div>
                     <h3>Munch Monsters</h3>
@@ -505,7 +570,7 @@ export function SiteApp({ initialPrivacy = false }: { initialPrivacy?: boolean }
           <div className="about-art">
             <span className="eyebrow">SMALL STUDIO. BIG IMAGINATION.</span>
             <Image
-              src={`${basePath}/brand/logo-square-apps-games-800.png`}
+              src={`${basePath}/brand/logo-square-apps-games-800.webp`}
               alt="Noodle Dragon Studio illustrated dragon emblem"
               width={800}
               height={800}
@@ -541,7 +606,8 @@ export function SiteApp({ initialPrivacy = false }: { initialPrivacy?: boolean }
             </a>
           </div>
         </section>
-        <div className="ticker" aria-label="Make. Play. Smile. Repeat.">
+        <div className="ticker">
+          <span className="sr-only">Make. Play. Smile. Repeat.</span>
           <div className="ticker-track" aria-hidden="true">
             {[0, 1].map((group) => (
               <div className="ticker-group" key={group}>
@@ -608,5 +674,15 @@ export function SiteApp({ initialPrivacy = false }: { initialPrivacy?: boolean }
 }
 
 export default function Home() {
-  return <SiteApp />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(homeStructuredData).replace(/</g, "\\u003c"),
+        }}
+      />
+      <SiteApp />
+    </>
+  );
 }

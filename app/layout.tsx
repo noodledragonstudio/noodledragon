@@ -4,56 +4,42 @@ import "./globals.css";
 const basePath = import.meta.env.VITE_BASE_PATH ?? "";
 const siteUrl = "https://noodledragon.studio";
 
-const organizationSchema = {
+const organizationId = `${siteUrl}/#organization`;
+const websiteId = `${siteUrl}/#website`;
+
+const structuredData = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": `${siteUrl}/#organization`,
-  name: "Noodle Dragon Studio",
-  url: `${siteUrl}/`,
-  logo: `${siteUrl}/brand/logo-square-apps-games-800.png`,
-  description:
-    "An independent app and game studio in Aotearoa New Zealand, creating useful software and playful experiences.",
-  email: "tony@noodledragon.studio",
-  address: { "@type": "PostalAddress", addressCountry: "NZ" },
-  sameAs: [
-    "https://macaroni.noodledragon.studio/",
-    "https://munch-monsters.noodledragon.studio/",
-  ],
-  makesOffer: [
+  "@graph": [
     {
-      "@type": "Offer",
-      price: "14.99",
-      priceCurrency: "USD",
-      availability: "https://schema.org/PreOrder",
-      itemOffered: {
-        "@type": "SoftwareApplication",
-        name: "Macaroni",
-        url: "https://macaroni.noodledragon.studio/",
-        applicationCategory: "DeveloperApplication",
-        operatingSystem: "macOS 15 or later",
-        description:
-          "A read-only Markdown viewer for Mac that watches project folders and shows what changed while AI agents work.",
+      "@type": "Organization",
+      "@id": organizationId,
+      name: "Noodle Dragon Studio",
+      url: `${siteUrl}/`,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/brand/logo-square-apps-games-800.webp`,
+        width: 800,
+        height: 800,
       },
+      description:
+        "An independent app and game studio in Aotearoa New Zealand, creating useful software and playful experiences.",
+      email: "tony@noodledragon.studio",
+      address: { "@type": "PostalAddress", addressCountry: "NZ" },
+      knowsAbout: [
+        "macOS app development",
+        "mobile app development",
+        "mobile game development",
+        "UX and UI design",
+        "game design",
+      ],
     },
     {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-      availability: "https://schema.org/PreOrder",
-      itemOffered: {
-        "@type": "VideoGame",
-        name: "Munch Monsters – Food Fun",
-        url: "https://munch-monsters.noodledragon.studio/",
-        applicationCategory: "GameApplication",
-        operatingSystem: "iOS",
-        audience: {
-          "@type": "PeopleAudience",
-          suggestedMinAge: 4,
-          suggestedMaxAge: 7,
-        },
-        description:
-          "A gentle, voice-led healthy-eating game for children aged 4–7, with no ads, in-app purchases or data collection.",
-      },
+      "@type": "WebSite",
+      "@id": websiteId,
+      url: `${siteUrl}/`,
+      name: "Noodle Dragon Studio",
+      inLanguage: "en-NZ",
+      publisher: { "@id": organizationId },
     },
   ],
 };
@@ -67,6 +53,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Noodle Dragon Studio", url: `${siteUrl}/` }],
   creator: "Noodle Dragon Studio",
   publisher: "Noodle Dragon Studio",
+  applicationName: "Noodle Dragon Studio",
   category: "Software and game development",
   manifest: `${basePath}/site.webmanifest`,
   icons: {
@@ -84,7 +71,7 @@ export const metadata: Metadata = {
     locale: "en_NZ",
     images: [
       {
-        url: `${siteUrl}/og.png`,
+        url: `${siteUrl}/og.jpg`,
         width: 1536,
         height: 1024,
         alt: "Noodle Dragon Studio",
@@ -96,7 +83,7 @@ export const metadata: Metadata = {
     title: "Noodle Dragon Studio | Macaroni & Munch Monsters",
     description:
       "Independent New Zealand studio making thoughtful apps and playful games, including Macaroni and Munch Monsters.",
-    images: [`${siteUrl}/og.png`],
+    images: [`${siteUrl}/og.jpg`],
   },
   robots: {
     index: true,
@@ -122,7 +109,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationSchema).replace(/</g, "\\u003c"),
+            __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
           }}
         />
         {children}

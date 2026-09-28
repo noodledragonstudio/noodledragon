@@ -43,12 +43,12 @@ export function SiteHeader() {
         onClick={() => setOpen(false)}
       >
         <Image
-          src={`${basePath}/brand/logo-horizontal-apps-games-640.png`}
+          src={`${basePath}/brand/logo-horizontal-apps-games-640.webp`}
           alt=""
           width={640}
           height={213}
           className="brand-logo"
-          priority
+          loading="eager"
         />
       </a>
       <nav className="desktop-nav" aria-label="Main navigation">

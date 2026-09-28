@@ -4,7 +4,7 @@
   --ink: #152620;
   --muted: #58645b;
   --line: #d9dccd;
-  --red: #dc3650;
+  --red: #c32943;
   --gold: #f3bc45;
   --mint: #cde1d7;
   --lilac: #e1dcec;
@@ -105,6 +105,17 @@ ul {
   color: var(--cream);
   padding: 12px;
   transform: translateY(-160%);
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 .skip-link:focus {
   transform: translateY(0);
@@ -382,8 +393,8 @@ ul {
   scroll-margin-top: 30px;
   padding-bottom: 78px;
 }
-.products-heading {
-  margin-bottom: 38px;
+.capabilities + .products {
+  padding-top: 0;
 }
 .product-grid {
   display: grid;
