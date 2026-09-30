@@ -21,16 +21,47 @@ const homeStructuredData = {
       "@type": "WebPage",
       "@id": `${siteUrl}/#webpage`,
       url: `${siteUrl}/`,
-      name: "Noodle Dragon Studio | Macaroni & Munch Monsters",
+      name: "Noodle Dragon Studio | Awakado, Macaroni & Munch Monsters",
       description:
-        "Independent New Zealand app and game studio behind Macaroni, a Markdown viewer for Mac, and Munch Monsters, a healthy-eating game for kids.",
+        "Independent New Zealand app and game studio behind Awakado, Macaroni and Munch Monsters—thoughtful software and playful games.",
       isPartOf: { "@id": `${siteUrl}/#website` },
       about: { "@id": `${siteUrl}/#organization` },
       mainEntity: [
         { "@id": `${siteUrl}/#macaroni` },
+        { "@id": `${siteUrl}/#awakado` },
         { "@id": `${siteUrl}/#munch-monsters` },
       ],
       inLanguage: "en-NZ",
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": `${siteUrl}/#awakado`,
+      name: "Awakado",
+      url: "https://awakado.noodledragon.studio/",
+      applicationCategory: "UtilitiesApplication",
+      operatingSystem: "macOS 14 or later",
+      description:
+        "A Mac menu-bar app that keeps a Mac awake while AI coding agents work and lets it sleep when they finish.",
+      image: `${siteUrl}/products/awakado-icon.webp`,
+      publisher: { "@id": `${siteUrl}/#organization` },
+      offers: [
+        {
+          "@type": "Offer",
+          name: "Awakado",
+          price: "0",
+          priceCurrency: "USD",
+          availability: "https://schema.org/PreOrder",
+          url: "https://awakado.noodledragon.studio/",
+        },
+        {
+          "@type": "Offer",
+          name: "Awakado Pro",
+          price: "9.99",
+          priceCurrency: "USD",
+          availability: "https://schema.org/PreOrder",
+          url: "https://awakado.noodledragon.studio/",
+        },
+      ],
     },
     {
       "@type": "SoftwareApplication",
@@ -78,7 +109,8 @@ const homeStructuredData = {
   ],
 };
 
-const homeTitle = "Noodle Dragon Studio | Macaroni & Munch Monsters";
+const homeTitle =
+  "Noodle Dragon Studio | Awakado, Macaroni & Munch Monsters";
 const privacyTitle = "Privacy | Noodle Dragon Studio";
 const homeSectionHashes = new Set([
   "#top",
@@ -403,7 +435,7 @@ export function SiteApp({ initialPrivacy = false }: { initialPrivacy?: boolean }
               </h2>
             </div>
             <p>
-              One useful Mac app. One playful food game. Both made with care,
+              Two useful Mac apps. One playful food game. All made with care,
               character and a healthy appetite for the details.
             </p>
           </div>
@@ -447,11 +479,52 @@ export function SiteApp({ initialPrivacy = false }: { initialPrivacy?: boolean }
               </div>
             </article>
 
+            <article className="product-card product-awakado">
+              <div className="product-content">
+                <div className="product-topline">
+                  <p className="eyebrow">MAC APP · COMING SOON</p>
+                  <span>02</span>
+                </div>
+                <div className="product-title-row">
+                  <Image
+                    className="product-icon"
+                    src={`${basePath}/products/awakado-icon.webp`}
+                    alt="Awakado app icon"
+                    width={256}
+                    height={256}
+                    sizes="(max-width: 760px) 64px, 80px"
+                  />
+                  <div>
+                    <h3>Awakado</h3>
+                    <p className="product-subtitle">
+                      Keep your Mac awake for AI work
+                    </p>
+                  </div>
+                </div>
+                <p>
+                  Keep your Mac awake only while AI coding agents are working,
+                  then let it sleep when they finish. Manual and Agent modes are
+                  free, with lid-closed runs and usage-limit wake in Pro.
+                </p>
+                <ul className="product-tags" aria-label="Awakado highlights">
+                  <li>macOS 14+</li>
+                  <li>21 AI agents</li>
+                  <li>Free · Pro $9.99</li>
+                </ul>
+                <a
+                  className="product-link"
+                  href="https://awakado.noodledragon.studio/"
+                >
+                  Visit Awakado <Arrow diagonal />
+                </a>
+              </div>
+            </article>
+
             <article className="product-card product-munch">
               <div className="product-content">
                 <div className="product-topline">
                   <p className="eyebrow">KIDS’ GAME · COMING SOON</p>
-                  <span>02</span>
+                  <span>03</span>
                 </div>
                 <div className="product-title-row">
                   <Image

@@ -46,9 +46,9 @@ const structuredData = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Noodle Dragon Studio | Macaroni & Munch Monsters",
+  title: "Noodle Dragon Studio | Awakado, Macaroni & Munch Monsters",
   description:
-    "Independent New Zealand app and game studio behind Macaroni, a Markdown viewer for Mac, and Munch Monsters, a healthy-eating game for kids.",
+    "Independent New Zealand app and game studio behind Awakado, Macaroni and Munch Monsters—thoughtful software and playful games.",
   alternates: { canonical: `${siteUrl}/` },
   authors: [{ name: "Noodle Dragon Studio", url: `${siteUrl}/` }],
   creator: "Noodle Dragon Studio",
@@ -62,9 +62,9 @@ export const metadata: Metadata = {
     apple: `${basePath}/apple-touch-icon.png`,
   },
   openGraph: {
-    title: "Noodle Dragon Studio | Macaroni & Munch Monsters",
+    title: "Noodle Dragon Studio | Awakado, Macaroni & Munch Monsters",
     description:
-      "Independent New Zealand studio making thoughtful apps and playful games, including Macaroni and Munch Monsters.",
+      "Independent New Zealand studio making thoughtful apps and playful games, including Awakado, Macaroni and Munch Monsters.",
     type: "website",
     url: `${siteUrl}/`,
     siteName: "Noodle Dragon Studio",
@@ -80,9 +80,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Noodle Dragon Studio | Macaroni & Munch Monsters",
+    title: "Noodle Dragon Studio | Awakado, Macaroni & Munch Monsters",
     description:
-      "Independent New Zealand studio making thoughtful apps and playful games, including Macaroni and Munch Monsters.",
+      "Independent New Zealand studio making thoughtful apps and playful games, including Awakado, Macaroni and Munch Monsters.",
     images: [`${siteUrl}/og.jpg`],
   },
   robots: {

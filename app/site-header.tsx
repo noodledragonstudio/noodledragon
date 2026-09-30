@@ -87,7 +87,7 @@ export function SiteHeader() {
         <a href="#contact" onClick={() => setOpen(false)}>
           <span>04</span>Let’s talk<span aria-hidden="true">↗</span>
         </a>
-        <p>Macaroni · Munch Monsters · More in the works</p>
+        <p>Awakado · Macaroni · Munch Monsters · More in the works</p>
       </nav>
     </header>
   );
