@@ -449,10 +449,10 @@ ul {
   filter: drop-shadow(0 9px 10px #1526201c);
 }
 .product-macaroni .product-icon {
-  transform: scale(1.232877);
+  transform: scale(1.25);
 }
 .product-awakado .product-icon {
-  transform: scale(1.142857);
+  transform: scale(1.242718);
 }
 .product-card h3 {
   font-size: clamp(34px, 3vw, 44px);
