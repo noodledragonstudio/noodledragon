@@ -50,7 +50,7 @@ const homeStructuredData = {
           name: "Awakado",
           price: "0",
           priceCurrency: "USD",
-          availability: "https://schema.org/PreOrder",
+          availability: "https://schema.org/InStock",
           url: "https://awakado.noodledragon.studio/",
         },
         {
@@ -58,7 +58,7 @@ const homeStructuredData = {
           name: "Awakado Pro",
           price: "9.99",
           priceCurrency: "USD",
-          availability: "https://schema.org/PreOrder",
+          availability: "https://schema.org/InStock",
           url: "https://awakado.noodledragon.studio/",
         },
       ],
@@ -88,9 +88,9 @@ const homeStructuredData = {
       name: "Munch Monsters – Food Fun",
       url: "https://munch-monsters.noodledragon.studio/",
       applicationCategory: "GameApplication",
-      operatingSystem: "iOS and iPadOS",
+      operatingSystem: "iOS, iPadOS and Android",
       description:
-        "A gentle, voice-led healthy-eating game for children aged 4–7, with no ads, in-app purchases or data collection.",
+        "A gentle, voice-led healthy-eating game for children aged 4–7, with 20 free levels, no ads and no data collection.",
       image: `${siteUrl}/products/munch-monsters-icon.webp`,
       publisher: { "@id": `${siteUrl}/#organization` },
       audience: {
@@ -457,13 +457,15 @@ export function SiteApp({ initialPrivacy = false }: { initialPrivacy?: boolean }
                   />
                   <div>
                     <h3>Macaroni</h3>
-                    <p className="product-subtitle">Markdown viewer for Mac</p>
+                    <p className="product-subtitle">
+                      Reads the whole folder.
+                    </p>
                   </div>
                 </div>
                 <p>
-                  Read a Markdown file or watch an entire project folder.
-                  Macaroni surfaces what changed while AI agents work, renders
-                  Mermaid and maths, adds Quick Look, and stays safely read-only.
+                  Open one Markdown file or point Macaroni at a project. It
+                  tracks what changed, renders Mermaid and maths, and never
+                  writes to your files.
                 </p>
                 <ul className="product-tags" aria-label="Macaroni highlights">
                   <li>macOS 15+</li>
@@ -482,7 +484,7 @@ export function SiteApp({ initialPrivacy = false }: { initialPrivacy?: boolean }
             <article className="product-card product-awakado">
               <div className="product-content">
                 <div className="product-topline">
-                  <p className="eyebrow">MAC APP · COMING SOON</p>
+                  <p className="eyebrow">MAC APP · AVAILABLE NOW</p>
                   <span>02</span>
                 </div>
                 <div className="product-title-row">
@@ -497,14 +499,14 @@ export function SiteApp({ initialPrivacy = false }: { initialPrivacy?: boolean }
                   <div>
                     <h3>Awakado</h3>
                     <p className="product-subtitle">
-                      Keep your Mac awake for AI work
+                      Awake while your agents work.
                     </p>
                   </div>
                 </div>
                 <p>
-                  Keep your Mac awake only while AI coding agents are working,
-                  then let it sleep when they finish. Manual and Agent modes are
-                  free, with lid-closed runs and usage-limit wake in Pro.
+                  Keeps your Mac awake while 21 AI coding agents work, then lets
+                  it sleep when they finish. Desk use is free; Pro handles
+                  lid-closed runs and usage-limit wake.
                 </p>
                 <ul className="product-tags" aria-label="Awakado highlights">
                   <li>macOS 14+</li>
@@ -513,9 +515,9 @@ export function SiteApp({ initialPrivacy = false }: { initialPrivacy?: boolean }
                 </ul>
                 <a
                   className="product-link"
-                  href="https://awakado.noodledragon.studio/"
+                  href="https://awakado.noodledragon.studio/downloads/Awakado.dmg"
                 >
-                  Visit Awakado <Arrow diagonal />
+                  Download Awakado <Arrow diagonal />
                 </a>
               </div>
             </article>
@@ -537,21 +539,23 @@ export function SiteApp({ initialPrivacy = false }: { initialPrivacy?: boolean }
                   />
                   <div>
                     <h3>Munch Monsters</h3>
-                    <p className="product-subtitle">Food Fun for ages 4–7</p>
+                    <p className="product-subtitle">
+                      Feed the monster. Learn the foods.
+                    </p>
                   </div>
                 </div>
                 <p>
-                  Feed everyday foods to Munch and place treats in the Treat
-                  Jar. A gentle, voice-led game with 20 levels, 200 foods and no
-                  ads, in-app purchases or data collection.
+                  A gentle sorting game for ages 4–7. Feed everyday foods to
+                  Munch and save treats for later. All 20 levels are
+                  free—offline and ad-free.
                 </p>
                 <ul
                   className="product-tags"
                   aria-label="Munch Monsters highlights"
                 >
-                  <li>iPhone &amp; iPad</li>
-                  <li>Fully offline</li>
-                  <li>No tracking</li>
+                  <li>iOS &amp; Android</li>
+                  <li>20 levels free</li>
+                  <li>No data collected</li>
                 </ul>
                 <a
                   className="product-link"

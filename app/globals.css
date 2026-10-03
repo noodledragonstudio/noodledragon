@@ -409,13 +409,13 @@ ul {
   min-width: 0;
 }
 .product-macaroni {
-  background: #eeebf4;
+  background: #f3f4fa;
 }
 .product-awakado {
-  background: #eef1d4;
+  background: #f3f5e7;
 }
 .product-munch {
-  background: #e3f1e9;
+  background: #eaf6ef;
 }
 .product-content {
   display: flex;
