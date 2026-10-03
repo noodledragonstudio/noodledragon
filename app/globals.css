@@ -436,7 +436,7 @@ ul {
 }
 .product-title-row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
   margin-bottom: 24px;
 }
