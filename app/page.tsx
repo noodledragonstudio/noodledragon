@@ -68,7 +68,6 @@ const homeStructuredData = {
       "@id": `${siteUrl}/#macaroni`,
       name: "Macaroni",
       url: "https://macaroni.noodledragon.studio/",
-      downloadUrl: "https://apps.apple.com/app/id6816400518",
       applicationCategory: "DeveloperApplication",
       operatingSystem: "macOS 15 or later",
       description:
@@ -80,7 +79,7 @@ const homeStructuredData = {
         price: "14.99",
         priceCurrency: "USD",
         availability: "https://schema.org/InStock",
-        url: "https://apps.apple.com/app/id6816400518",
+        url: "https://macaroni.noodledragon.studio/",
       },
     },
     {
@@ -475,9 +474,9 @@ export function SiteApp({ initialPrivacy = false }: { initialPrivacy?: boolean }
                 </ul>
                 <a
                   className="product-link"
-                  href="https://apps.apple.com/app/id6816400518"
+                  href="https://macaroni.noodledragon.studio/"
                 >
-                  Download on the Mac App Store <Arrow diagonal />
+                  Visit Macaroni <Arrow diagonal />
                 </a>
               </div>
             </article>

@@ -5,7 +5,7 @@ Noodle Dragon Studio is an independent app and game studio based in Aotearoa New
 ## Products
 
 - Awakado: An available macOS 14+ menu-bar app that keeps a Mac awake while 21 supported AI coding agents work and lets it sleep when they finish. Manual and Agent modes are free. Awakado Pro adds lid-closed operation and usage-limit wake for a one-time $9.99, for up to three Macs. Website: https://awakado.noodledragon.studio/
-- Macaroni: An available read-only Markdown viewer for macOS 15 or later. It opens individual Markdown files or watches an entire project folder, surfaces files changed by AI agents, shows diffs since the last read, and renders Mermaid diagrams, KaTeX maths and syntax-highlighted code. It includes a Quick Look extension, works offline, and costs $14.99 once with no subscription or account. Website: https://macaroni.noodledragon.studio/ App Store: https://apps.apple.com/app/id6816400518
+- Macaroni: An available read-only Markdown viewer for macOS 15 or later. It opens individual Markdown files or watches an entire project folder, surfaces files changed by AI agents, shows diffs since the last read, and renders Mermaid diagrams, KaTeX maths and syntax-highlighted code. It includes a Quick Look extension, works offline, and costs $14.99 once with no subscription or account. Website: https://macaroni.noodledragon.studio/
 - Munch Monsters – Food Fun: A gentle, voice-led healthy-eating game for children aged 4–7. Players feed everyday foods to Munch and place treats in the Treat Jar across 20 free levels and 200 foods. It works offline and has no ads, in-app purchases or data collection. Coming soon to the App Store for iPhone and iPad and to Google Play for Android. Website: https://munch-monsters.noodledragon.studio/
 
 ## Studio
