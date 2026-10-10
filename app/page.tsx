@@ -515,9 +515,9 @@ export function SiteApp({ initialPrivacy = false }: { initialPrivacy?: boolean }
                 </ul>
                 <a
                   className="product-link"
-                  href="https://awakado.noodledragon.studio/downloads/Awakado.dmg"
+                  href="https://awakado.noodledragon.studio/"
                 >
-                  Download Awakado <Arrow diagonal />
+                  Visit Awakado <Arrow diagonal />
                 </a>
               </div>
             </article>
